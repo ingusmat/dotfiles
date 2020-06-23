@@ -15,9 +15,6 @@ Plug 'kien/ctrlp.vim'
 " Nerd Tree
 Plug 'preservim/nerdtree'
 
-" Linting
-Plug 'dense-analysis/ale'
-
 " One-Monokai color scheme
 Plug 'fratajczak/one-monokai-vim'
 
@@ -107,6 +104,17 @@ nnoremap <leader>sv :source ~/.vim/vimrc<cr>
 
 nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lel
 nnoremap <leader>' viw<esc>a'<esc>bi'<esc>lel
+
+inoremap (; ()<esc>i
+inoremap {; {  }<esc>hi
+inoremap [; []<esc>i
+
+inoremap (: (<CR>)<C-c>O<tab>
+inoremap {: {<CR>}<C-c>O<tab>
+inoremap [: [<CR>]<C-c>O<tab>
+
+
+
 
 "" Syntax and Languages
 augroup FiletypeGroup
