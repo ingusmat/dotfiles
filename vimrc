@@ -15,8 +15,14 @@ Plug 'kien/ctrlp.vim'
 " Nerd Tree
 Plug 'preservim/nerdtree'
 
-" One-Monokai color scheme
+" color schemes
 Plug 'fratajczak/one-monokai-vim'
+Plug 'gruvbox-community/gruvbox'
+Plug 'sainnhe/gruvbox-material'
+Plug 'phanviet/vim-monokai-pro'
+Plug 'vim-airline/vim-airline'
+Plug 'flazz/vim-colorschemes'
+Plug '/home/mpaulson/personal/vim-be-good'
 
 " Syntax Highlighting
 Plug 'sheerun/vim-polyglot'
@@ -50,6 +56,11 @@ set wildmode=list:longest
 set ttyfast
 set nobackup
 set nowritebackup
+set noswapfile
+set autowrite
+set undodir=~/.vim/undodir
+set undofile
+set guicursor=
 
 "" Searching
 nnoremap / /\v
@@ -109,12 +120,12 @@ inoremap (; ()<esc>i
 inoremap {; {  }<esc>hi
 inoremap [; []<esc>i
 
-inoremap (: (<CR>)<C-c>O<tab>
-inoremap {: {<CR>}<C-c>O<tab>
-inoremap [: [<CR>]<C-c>O<tab>
+inoremap (: (<CR>)<esc>O
+inoremap {: {<CR>}<esc>O
+inoremap [: [<CR>]<esc>O
 
-
-
+nnoremap <leader>\| :vnew<cr>
+nnoremap <leader>- :new<cr>
 
 "" Syntax and Languages
 augroup FiletypeGroup
@@ -133,7 +144,7 @@ let g:closetag_filenames = '*.html,*.jsx,*.js'
 "" Colors
 let g:impact_transbg=1
 set termguicolors
-colorscheme one-monokai
+colorscheme gruvbox
 
 "" Fonts
 set guifont=FiraCode\ NF\ 12
@@ -159,15 +170,9 @@ let g:ale_fixers = {
 "let g:ale_sign_warning = '⚠️'
 "let g:ale_statusline_format = '💩 %d', '⚠️ %d', '']
 
-" let g:ale_sign_error = '💣'
-" let g:ale_sign_warning = '🚩'
-" let g:ale_statusline_format = ['💣 %d', '🚩 %d', '']
-" TextEdit might fail if hidden is not set.
 set hidden
 
 " Some servers have issues with backup files, see #649.
-set nobackup
-set nowritebackup
 
 " Give more space for displaying messages.
 set cmdheight=2
