@@ -47,8 +47,12 @@ set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set expandtab
+set smartindent
+set colorcolumn=80
+highlight ColorColumn ctermbg=0 guibg=lightgray
 
 "" Tell Vim to not act like an idiot
+set noerrorbells
 set encoding=utf-8
 set showmode
 set hidden
@@ -61,6 +65,7 @@ set autowrite
 set undodir=~/.vim/undodir
 set undofile
 set guicursor=
+set mouse=a
 
 "" Searching
 nnoremap / /\v
@@ -70,6 +75,7 @@ set ignorecase
 set smartcase
 set gdefault
 set showmatch
+set incsearch
 nnoremap <leader><space> :noh<c
 nnoremap <tab> %
 vnoremap <tab> %
@@ -109,6 +115,8 @@ nnoremap <leader>h <C-w>h
 nnoremap <leader>j <C-w>j
 nnoremap <leader>k <C-w>k
 nnoremap <leader>l <C-w>l
+nnoremap <C-,> <C-i>
+nnoremap <C-.> <C-o>
 
 nnoremap <leader>ev :vsplit ~/.vim/vimrc<cr>
 nnoremap <leader>sv :source ~/.vim/vimrc<cr>
@@ -148,7 +156,7 @@ colorscheme gruvbox
 
 "" Fonts
 set guifont=FiraCode\ NF\ 12
-set number
+set relativenumber
 
 "" NERDTree
 nnoremap \nt :NERDTree<cr>
@@ -158,21 +166,17 @@ set rtp+=~/.fzf
 
 
 "" Ale
-let g:ale_linters = {
-\ 'javascript': ['eslint'],
-\}
+"let g:ale_linters = {
+"\ 'javascript': ['eslint'],
+"\}
 
-let g:ale_fixers = {
- \ 'javascript': ['eslint', 'prettier']
- \ }
+"let g:ale_fixers = {
+" \ 'javascript': ['eslint', 'prettier']
+" \ }
  
 "let g:ale_sign_error = '💩'
 "let g:ale_sign_warning = '⚠️'
 "let g:ale_statusline_format = '💩 %d', '⚠️ %d', '']
-
-set hidden
-
-" Some servers have issues with backup files, see #649.
 
 " Give more space for displaying messages.
 set cmdheight=2
