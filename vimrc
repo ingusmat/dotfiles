@@ -107,8 +107,6 @@ inoremap jj <ESC>
 "" Moving Around
 nnoremap H ^
 nnoremap L $
-nnoremap J G
-nnoremap K gg
 
 nnoremap <leader>w <C-w>v<C-w>l
 nnoremap <leader>h <C-w>h
@@ -123,6 +121,10 @@ nnoremap <leader>sv :source ~/.vim/vimrc<cr>
 
 nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lel
 nnoremap <leader>' viw<esc>a'<esc>bi'<esc>lel
+
+nnoremap <leader>< /\v\<\<\<\<\<<cr>
+nnoremap <leader>> /\v\>\>\>\>\><cr>
+nnoremap <leader>= /\v\=\=\=\=\=<cr>
 
 inoremap (; ()<esc>i
 inoremap {; {  }<esc>hi
