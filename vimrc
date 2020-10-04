@@ -48,7 +48,7 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 set smartindent
-set colorcolumn=80
+set colorcolumn=100
 highlight ColorColumn ctermbg=0 guibg=lightgray
 
 "" Tell Vim to not act like an idiot
@@ -159,9 +159,11 @@ colorscheme gruvbox
 "" Fonts
 set guifont=FiraCode\ NF\ 12
 set relativenumber
+set nu
 
 "" NERDTree
-nnoremap \nt :NERDTree<cr>
+nnoremap \nt :NERDTreeToggle<cr>
+let NERDTreeShowHidden=1
 
 "" Fuzzy Finding
 set rtp+=~/.fzf
