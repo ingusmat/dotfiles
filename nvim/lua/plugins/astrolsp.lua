@@ -6,10 +6,8 @@ return {
       ts_ls = {
         filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact" },
       },
-      volar = {
-        init_options = {
-          typescript = { tsdk = "node_modules/typescript/lib" },
-        },
+      vue_ls = {
+        filetypes = { "vue" },
       },
     },
   },
