@@ -104,3 +104,4 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vim="nvim"
 export PATH="$HOME/.local/bin:$PATH"
+export ANTHROPIC_API_KEY="your-key-here"  # console.anthropic.com → API Keys
